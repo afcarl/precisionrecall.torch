@@ -73,8 +73,6 @@ local function precisionrecallmatrix(conf, labels, nfalseneg, recallstep)
       local _recallstep = recallstep
       local _rec, _prec, _ap, _sortind = precisionrecallvector(_conf, _labels, _nfalseneg, _recallstep)
       
-      print(_rec:size())
-      print(rec:size())
       rec:select(1,i):copy(_rec)
       prec:select(1,i):copy(_prec)
       ap[i]=_ap

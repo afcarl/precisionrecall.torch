@@ -12,7 +12,7 @@ local function precisionrecallvector(conf, labels, nfalseneg, recallstep)
    
    local _tp=labels:index(1,sortind):gt(0):float()
    local _fp=labels:index(1,sortind):lt(0):float()
-   local npos=labels:eq(1):float():sum() + falseneg
+   local npos=labels:eq(1):float():sum() + nfalseneg
    
    -- precision / recall computation
    

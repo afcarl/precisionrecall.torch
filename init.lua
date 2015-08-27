@@ -8,7 +8,7 @@ local function precisionrecallvector(conf, labels, nfalseneg, recallstep)
    local nfalseneg = nfalseneg or 0
    local recallstep = recallstep or 0.1
    
-   local so,sortind = scores:sort(true)
+   local so,sortind = conf:sort(true)
    
    local _tp=labels:index(1,sortind):gt(0):float()
    local _fp=labels:index(1,sortind):lt(0):float()
